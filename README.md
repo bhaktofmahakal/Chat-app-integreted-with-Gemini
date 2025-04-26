@@ -47,7 +47,9 @@ This app allows users to experience human-like conversation with an AI agent in 
 📂 Project Structure
 
 bash
+
 Copy
+
 Edit
 
     Chat-app/
@@ -64,7 +66,9 @@ Edit
 Clone the repository:
 
 bash
+
 Copy
+
 Edit
 
     git clone https://github.com/bhaktofmahakal/Chat-app.git
@@ -83,6 +87,7 @@ Start your XAMPP/WAMP server and open the app in your browser.
 Register a new account, log in, and start chatting with Gemini AI!
 
 📸 Screenshots (Recommended)
+
 (Add screenshots of login page, registration page, chat screen showing AI responses)
 
 📝 License
