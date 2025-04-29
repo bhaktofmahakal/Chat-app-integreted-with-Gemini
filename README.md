@@ -47,12 +47,6 @@ This app allows users to experience human-like conversation with an AI agent in 
 
 📂 Project Structure
 
-bash
-
-Copy
-
-Edit
-
     Chat-app/
     ├── assets/           # Static files: CSS, JS, Images
     ├── includes/         # PHP scripts: DB connection, authentication, Gemini API integration
@@ -62,17 +56,19 @@ Edit
     ├── logout.php        # Logout script
     ├── gemini_api.php    # (Handles communication with Gemini API)
     └── README.md
+## 📸 Screenshots
+
+### 🏠 Home Page  
+![Home](image/homepage.png)
+
+### ⚙️ Admin Dashboard  
+![Admin Dashboard](image/admin-page.png)
     
 🚀 Setup Instructions
 Clone the repository:
 
-bash
-
-Copy
-
-Edit
-
     git clone https://github.com/bhaktofmahakal/Chat-app.git
+    
 Create a MySQL database.
 
 Configure your database credentials in includes/db.php.
