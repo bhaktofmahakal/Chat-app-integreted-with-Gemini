@@ -62,7 +62,7 @@ This app allows users to experience human-like conversation with an AI agent in 
 ![Home](image/homepage.png)
 
 ### ⚙️ Admin Dashboard  
-![Admin Dashboard](image/admin-page.png)
+![Admin Dashboard](image/adminpage.png)
     
 🚀 Setup Instructions
 Clone the repository:
