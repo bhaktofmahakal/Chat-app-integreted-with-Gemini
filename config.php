@@ -1,5 +1,5 @@
 <?php
-define('API_KEY', 'AIzaSyBRThL0mxynPxeZB3ox3kksn_v0Rn6SK_E'); // 
+define('API_KEY', 'your_api_key'); // 
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
