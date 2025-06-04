@@ -130,9 +130,12 @@ Example placeholders:
 
 - **Registration Page**  
   ![Register Page](image/register.png)
+  
+- **Admin Page**  
+  ![Admin Page](image/admin.png)
 
 - **Chat Interface**  
-  ![Chat Screen](image/chat_screen.png)
+  ![Chat Screen](image/home-page.png)
 
 ---
 
