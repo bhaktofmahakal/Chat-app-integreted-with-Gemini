@@ -1,4 +1,4 @@
-# 🧠 Chat App (Powered by Gemini AI)
+# 🧠 AI Assistant (Powered by Gemini AI)
 
 A **real-time, intelligent chat application** built with **PHP**, **MySQL**, **JavaScript**, and **AJAX**, fully integrated with the **Gemini AI API** to generate smart, dynamic responses. Users can enjoy a human-like conversational experience in real-time!
 
