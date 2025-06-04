@@ -125,11 +125,8 @@ A **real-time, intelligent chat application** built with **PHP**, **MySQL**, **J
 
 Example placeholders:
 
-- **Login Page**  
-  ![Login Page](image/login.png)
-
-- **Registration Page**  
-  ![Register Page](image/register.png)
+- ** AdminLogin Page**  
+  ![Admin Login Page](image/admin-login.png)
   
 - **Admin Page**  
   ![Admin Page](image/admin.png)
