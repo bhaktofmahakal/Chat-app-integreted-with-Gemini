@@ -76,6 +76,44 @@ A **real-time, intelligent chat application** built with **PHP**, **MySQL**, **J
 <summary>Click to expand</summary>
 
 
+### 🔍 Explanation of Key Folders
+
+- **public/**  
+  Only files under `public/` should be directly accessible via the browser. Everything else lives outside the web root for security.
+
+- **src/Controllers/**  
+  Each controller handles a specific set of routes (e.g., `AuthController` for login/register, `ChatController` for message endpoints). They coordinate between models, services, and templates.
+
+- **src/Models/**  
+  Models contain methods for interacting with the MySQL database (e.g., `User::create()`, `Message::getRecentMessages()`).
+
+- **src/Services/**  
+  Encapsulate external API calls (Gemini). Keeping Gemini logic here ensures controllers remain clean and focused on request/response flow.
+
+- **src/Utils/**  
+  Common helper classes: input validation (`Validator::sanitize()`), standard response formatting for AJAX (`Response::json()`), and any other reusable functions.
+
+- **src/Templates/**  
+  If you’re using PHP includes (instead of a full templating engine), store partial templates here (header, footer, form snippets, chat window, error pages).
+
+- **config/**  
+  Single source of truth for configuration variables (DB credentials, API keys). Keeping `config.php` outside `public/` prevents accidental exposure.
+
+- **database/**  
+  Store your SQL schema, seed data, or migration scripts here. You can extend for versioned migrations as your project grows.
+
+- **logs/** (Optional)  
+  Write runtime errors or chat activity (for debugging/troubleshooting). Make sure `logs/` is writable by the web server.
+
+- **tests/** (Optional)  
+  Unit tests or integration tests (e.g., with PHPUnit). Helps ensure core functionality (authentication, chat, Gemini integration) remains stable.
+
+- **vendor/** (Optional)  
+  If you use Composer for dependencies (e.g., a PSR-4 autoloader, Guzzle HTTP client), they live here. Otherwise, omit.
+
+- **.gitignore**  
+  Ignore sensitive files and folders:  
+
 
 </details>
 
