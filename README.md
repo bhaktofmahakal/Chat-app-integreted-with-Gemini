@@ -121,18 +121,32 @@ A **real-time, intelligent chat application** built with **PHP**, **MySQL**, **J
 
 ## 📸 Screenshots
 
-> Screenshots will go here once available.
+> A quick look at key interfaces of the application
 
-Example placeholders:
+---
 
-- ** AdminLogin Page**  
-  ![Admin Login Page](image/admin-login.png)
-  
-- **Admin Page**  
-  ![Admin Page](image/admin.png)
+### 🔐 Admin Login Page  
+<div align="center">
+  <img src="image/admin-login.png" alt="Admin Login Page" width="80%" style="border:1px solid #ccc; border-radius:10px;" />
+  <p><em>Simplified and secure login for administrators.</em></p>
+</div>
 
-- **Chat Interface**  
-  ![Chat Screen](image/homepage.png)
+---
+
+### 🛠️ Admin Dashboard  
+<div align="center">
+  <img src="image/admin.png" alt="Admin Dashboard" width="80%" style="border:1px solid #ccc; border-radius:10px;" />
+  <p><em>All-in-one control panel to manage the platform.</em></p>
+</div>
+
+---
+
+### 💬 Chat Interface  
+<div align="center">
+  <img src="image/homepage.png" alt="Chat Interface" width="80%" style="border:1px solid #ccc; border-radius:10px;" />
+  <p><em>Responsive, real-time AI chat system for users.</em></p>
+</div>
+
 
 ---
 
