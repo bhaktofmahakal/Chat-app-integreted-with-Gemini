@@ -135,7 +135,7 @@ Example placeholders:
   ![Admin Page](image/admin.png)
 
 - **Chat Interface**  
-  ![Chat Screen](image/home-page.png)
+  ![Chat Screen](image/homepage.png)
 
 ---
 
