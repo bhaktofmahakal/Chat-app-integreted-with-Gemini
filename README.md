@@ -147,15 +147,4 @@ A **real-time, intelligent chat application** built with **PHP**, **MySQL**, **J
   <p><em>Responsive, real-time AI chat system for users.</em></p>
 </div>
 
-
 ---
-
-## 🚀 Installation & Setup
-
-Follow these steps to get the Chat App up and running locally:
-
-### 1. Clone the Repository
-```bash
-
-git clone https://github.com/bhaktofmahakal/Chat-app-integreted-with-Gemini.git
-cd Chat-app-integreted-with-Gemini
