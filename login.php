@@ -1,24 +1,37 @@
 <?php
 session_start();
-require_once 'db.php';
+require_once 'config.php';
 
 $error_message = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $u = $_POST['username'];
-    $p = hash('sha256', $_POST['password']);
-
-    $stmt = $conn->prepare("SELECT * FROM admins WHERE username=? AND password=?");
-    $stmt->bind_param("ss", $u, $p);
-    $stmt->execute();
-    $res = $stmt->get_result();
-
-    if ($res->num_rows) {
-        $_SESSION['admin'] = $u;
-        header("Location: admin.php");
-        exit;
+    $p = $_POST['password'];
+    
+    $conn = getDBConnection();
+    if (!$conn) {
+        $error_message = "Database connection failed";
     } else {
-        $error_message = "Invalid credentials. Please try again.";
+        // Use password_verify for proper password checking
+        $stmt = $conn->prepare("SELECT * FROM admins WHERE username = ?");
+        $stmt->bind_param("s", $u);
+        $stmt->execute();
+        $res = $stmt->get_result();
+
+        if ($res->num_rows && $admin = $res->fetch_assoc()) {
+            // Check password (supports both old hash and new bcrypt)
+            if (password_verify($p, $admin['password']) || hash('sha256', $p) === $admin['password']) {
+                $_SESSION['admin_logged_in'] = true;
+                $_SESSION['admin_username'] = $u;
+                $_SESSION['admin_id'] = $admin['id'];
+                header("Location: admin-panel/login.php");
+                exit;
+            } else {
+                $error_message = "Invalid username or password";
+            }
+        } else {
+            $error_message = "Invalid username or password";
+        }
     }
 }
 ?>
