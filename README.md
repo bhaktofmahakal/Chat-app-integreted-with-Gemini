@@ -7,7 +7,11 @@
 
 <!-- 🚀 High-Impact GitHub Banner -->
 <p align="center">
-  <img src="https://via.placeholder.com/1200x400/667eea/ffffff?text=AI+Assistant+Chat+Application" alt="AI Chat Assistant Banner" width="100%" style="max-width: 1200px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+  <img 
+    src="https://via.placeholder.com/1200x400/667eea/ffffff?text=AI+Assistant+Chat+Application" 
+    alt="AI Chat Assistant Banner" 
+    width="100%" 
+    style="max-width: 1200px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
 </p>
 
 **AI Assistant Chat Application** is a cutting-edge, full-stack conversational AI platform that harnesses the power of Google's Gemini 1.5 Flash model to deliver intelligent, context-aware responses. Built with modern web technologies, it features an integrated LaTeX editor, comprehensive admin dashboard, and advanced chat management capabilities.
