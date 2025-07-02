@@ -374,24 +374,19 @@ Content-Type: application/json
 ### Minimum Requirements
 - **PHP**: 8.0+
 - **MySQL**: 5.7+
-- **RAM**: 2GB
-- **Storage**: 1GB free space
+- **RAM**: 16GB
+- **Storage**: 200GB free space
 - **LaTeX**: TeXLive 2020+
 
 ### Recommended Requirements
 - **PHP**: 8.2+
 - **MySQL**: 8.0+
-- **RAM**: 4GB+
-- **Storage**: 5GB free space
+- **RAM**: 8GB+
+- **Storage**: 150GB free space
 - **LaTeX**: TeXLive 2023+
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
 
 ## 🙏 Acknowledgments
 
@@ -406,15 +401,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - **GitHub Issues**: [Report bugs and feature requests](https://github.com/bhaktofmahakal/Chat-app-integreted-with-Gemini/issues)
 - **Discussions**: [Community discussions and Q&A](https://github.com/bhaktofmahakal/Chat-app-integreted-with-Gemini/discussions)
-- **Email**: [Contact the maintainer](mailto:your-email@example.com)
+- **Email**: [Contact the maintainer](mailto:utsavmishraa005@gmail.com)
 
 ---
 
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=bhaktofmahakal/Chat-app-integreted-with-Gemini&type=Date)](https://star-history.com/#bhaktofmahakal/Chat-app-integreted-with-Gemini&Date)
-
----
 
 <p align="center">
   <strong>"The best way to predict the future is to create it."</strong><br>
