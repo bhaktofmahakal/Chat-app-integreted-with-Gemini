@@ -1,13 +1,11 @@
 <?php
-define('API_KEY', 'AIzaSyBRThL0mxynPxeZB3ox3kksn_v0Rn6SK_E'); // Gemini 1.5 Flash API Key
+define('API_KEY', 'AIzaSyBRThL0mxynPxeZB3ox3kksn_v0Rn6SK_E');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'chat_app');
-define('TIME_WINDOW', 60);  // Time window in seconds
-define('RATE_LIMIT', 10);   // Number of requests allowed per time window
-
-// Database connection function
+define('TIME_WINDOW', 60);
+define('RATE_LIMIT', 10);
 function getDBConnection() {
     try {
         $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);

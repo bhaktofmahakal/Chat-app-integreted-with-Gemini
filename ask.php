@@ -1,8 +1,5 @@
 <?php
-/**
- * Simplified API endpoint for AI chat requests (non-streaming).
- * This script is designed to be robust, with comprehensive error handling.
- */
+
 
 // 1. Set the global error handler as the very first thing.
 require_once 'error_handler.php';
@@ -30,154 +27,9 @@ try {
 
     // Include dependencies within the try block
     require_once 'config.php';
+    require_once 'utilities.php'; // Include shared utilities
 
-    // --- Helper Functions ---
-
-    function getIP() {
-        return $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_X_REAL_IP'] ?? $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
-    }
-
-    function getEnhancedSystemPrompt($userPrompt) {
-        $lowerPrompt = strtolower($userPrompt);
-        $isCodeRequest = false;
-        $isMarkdownRequest = false;
-        
-        // Check for markdown-specific requests
-        $markdownKeywords = ['.md file', 'markdown file', 'markdown format', 'md format', 
-                           'create md', 'generate md', 'make markdown', 'export markdown'];
-        
-        foreach ($markdownKeywords as $keyword) {
-            if (strpos($lowerPrompt, $keyword) !== false) {
-                $isMarkdownRequest = true;
-                break;
-            }
-        }
-        
-        // Check for negative keywords that indicate NOT a code request
-        $negativeKeywords = ['not code', 'no code', 'not the code', 'without code', 'only info', 'only give info', 'only theory', 'theoretical', 'explain', 'what is', 'about'];
-        $isNegativeRequest = false;
-        
-        foreach ($negativeKeywords as $keyword) {
-            if (strpos($lowerPrompt, $keyword) !== false) {
-                $isNegativeRequest = true;
-                break;
-            }
-        }
-        
-        // Only detect code if not explicitly asking for non-code
-        if (!$isNegativeRequest) {
-            // Detect if user is asking for code (more specific detection)
-            $codeKeywords = ['write code', 'create code', 'generate code', 'show code', 'write function', 'create function', 'write script', 'create script', 'implement code', 'build application'];
-            $languageKeywords = ['python', 'javascript', 'js', 'php', 'java', 'html', 'css', 'sql', 'bash', 'json', 'c++', 'typescript'];
-            
-            foreach ($codeKeywords as $keyword) {
-                if (strpos($lowerPrompt, $keyword) !== false) {
-                    $isCodeRequest = true;
-                    break;
-                }
-            }
-            
-            foreach ($languageKeywords as $lang) {
-                if (strpos($lowerPrompt, $lang) !== false) {
-                    $isCodeRequest = true;
-                    break;
-                }
-            }
-        }
-        
-        if ($isCodeRequest) {
-            return getCodeGenerationPrompt();
-        } elseif ($isMarkdownRequest) {
-            return getMarkdownPrompt();
-        } else {
-            return getGeneralAssistantPrompt();
-        }
-    }
-
-    function getCodeGenerationPrompt() {
-        return "# Expert Code Assistant
-
-Provide clean, production-ready code with proper markdown formatting.
-
-## Format Rules:
-- Use ```language code blocks (e.g., ```python, ```javascript)
-- Never use ** asterisks ** for code
-- Add brief explanations and comments
-- Include usage examples when helpful
-
-## Response Structure:
-1. Brief solution explanation
-2. Code block with syntax highlighting
-3. Key features/usage notes
-
-Focus on clean, working code with clear explanations.";
-    }
-
-    function getGeneralAssistantPrompt() {
-        return "You are a helpful AI assistant. Provide clear, direct responses in plain text format.
-
-IMPORTANT FORMATTING RULES:
-- Use plain text only (no markdown formatting)
-- Do NOT use ** for bold text
-- Do NOT use * for italics  
-- Use simple bullet points with - or numbers
-- Only use markdown when user specifically asks for .md file or markdown format
-
-Guidelines:
-- Be direct and concise
-- Provide practical solutions
-- Use simple formatting
-- Include relevant examples in plain text
-
-Keep responses natural and conversational without markdown styling.";
-    }
-
-    function getMarkdownPrompt() {
-        return "You are creating a markdown document as specifically requested by the user.
-
-FORMAT REQUIREMENTS:
-- Use proper markdown syntax with ** for bold, * for italics
-- Use # for headers, ## for subheaders
-- Use - or * for bullet points
-- Use ```language for code blocks
-- Use > for blockquotes
-- Use [text](url) for links
-
-Create well-structured markdown content suitable for saving as .md file.";
-    }
-
-    function rateLimit($conn, $ip) {
-        if (!$conn) return false;
-        $window = defined('TIME_WINDOW') ? TIME_WINDOW : 60;
-        $limit = defined('RATE_LIMIT') ? RATE_LIMIT : 10;
-        $stmt = $conn->prepare("SELECT COUNT(*) as count FROM chat_history WHERE user_ip=? AND created_at > (NOW() - INTERVAL ? SECOND)");
-        $stmt->bind_param("si", $ip, $window);
-        $stmt->execute();
-        $res = $stmt->get_result()->fetch_assoc();
-        return $res['count'] >= $limit;
-    }
-
-    function saveChat($conn, $ip, $prompt, $response) {
-        if (!$conn) return true;
-        
-        // Use new database logger
-        $logger = new ChatLogger();
-        $sessionId = getSessionId();
-        
-        // Save user message
-        $logger->logMessage($sessionId, 'user', $prompt, false, null, $ip);
-        
-        // Save assistant response
-        $logger->logMessage($sessionId, 'assistant', $response, false, null, $ip);
-        
-        // Log API usage stats
-        $logger->logAPIUsage(true);
-        
-        // Also keep old format for backward compatibility
-        $stmt = $conn->prepare("INSERT INTO chat_history (user_ip, prompt, response) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $ip, $prompt, $response);
-        return $stmt->execute();
-    }
+    //  utilities.php 
 
     // --- Main Logic ---
 
@@ -267,9 +119,7 @@ Create well-structured markdown content suitable for saving as .md file.";
     ]);
 
 } catch (Throwable $e) {
-    // The global exception handler from error_handler.php will catch this,
-    // log it, and output a clean JSON error response.
-    // We re-throw it to ensure it's caught by the registered handler.
+   
     throw $e;
 }
 ?>

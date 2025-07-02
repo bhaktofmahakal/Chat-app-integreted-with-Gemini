@@ -442,6 +442,19 @@ require_once 'config.php';
         </div>
 
         <div class="flex items-center space-x-3">
+          <!-- LaTeX Editor Button -->
+          <button
+            onclick="window.open('latex-editor/', '_blank')"
+            class="flex items-center space-x-2 px-3 py-2 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            aria-label="LaTeX Editor"
+            title="Professional LaTeX to PDF Editor"
+          >
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span class="text-sm font-medium">LaTeX</span>
+          </button>
+
           <!-- Conversation History Button -->
           <button
             id="open-sidebar"
@@ -787,10 +800,9 @@ require_once 'config.php';
             id="prompt-input"
             placeholder="Type your message..."
             class="flex-1 bg-transparent border-0 focus:ring-0 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 px-4 py-3"
-            maxlength="300"
           />
 
-          <div id="char-count" class="mr-2 text-xs text-gray-500 dark:text-gray-400">0/300</div>
+
 
           <button
             type="submit"
@@ -1005,7 +1017,7 @@ require_once 'config.php';
     const loadingIndicator = document.getElementById('loading-indicator');
     const typingText = document.getElementById('typing-text');
     const typingProgress = document.getElementById('typing-progress');
-    const charCount = document.getElementById('char-count');
+    // charCount removed - unlimited input length
     const themeToggle = document.getElementById('theme-toggle');
     const clearChatButton = document.getElementById('clear-chat');
     const toast = document.getElementById('toast');
@@ -1361,7 +1373,7 @@ require_once 'config.php';
 
     function showCopyError(button) {
       const originalText = button.innerHTML;
-      button.innerHTML = '❌ Failed';
+      button.innerHTML = ' !! Failed';
       button.style.background = '#ef4444';
       setTimeout(() => {
         button.innerHTML = originalText;
@@ -1603,11 +1615,8 @@ require_once 'config.php';
         showToast('Please enter a message before sending.', 'error');
         return false;
       }
+      // Removed character limit - allow longer messages
       
-      if (prompt.length > 300) {
-        showToast('Your message exceeds 300 characters. Please shorten it.', 'error');
-        return false;
-      }
       
       return true;
     }
@@ -1650,7 +1659,6 @@ require_once 'config.php';
       // Add message with image if one is selected
       addMessage(prompt, 'user');
       promptInput.value = '';
-      charCount.textContent = '0/300';
       
       startTypingAnimation();
       sendButton.disabled = true;
@@ -1857,10 +1865,7 @@ require_once 'config.php';
       }
     });
 
-    // Handle input changes
-    promptInput.addEventListener('input', () => {
-      charCount.textContent = `${promptInput.value.length}/300`;
-    });
+    // Character counter removed - allow unlimited length
 
     // Handle voice input with enhanced error handling
     micButton.addEventListener('click', () => {
@@ -1904,7 +1909,6 @@ require_once 'config.php';
             .join('');
 
           promptInput.value = transcript;
-          charCount.textContent = `${transcript.length}/300`;
         };
 
         currentRecognition.onend = () => {
@@ -2151,7 +2155,6 @@ require_once 'config.php';
       button.addEventListener('click', function() {
         const prompt = this.textContent.trim();
         promptInput.value = prompt;
-        charCount.textContent = `${prompt.length}/300`;
         promptInput.focus();
       });
     });

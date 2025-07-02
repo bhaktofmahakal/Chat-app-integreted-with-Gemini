@@ -7,14 +7,14 @@ $format = $_GET['format'] ?? 'csv';
 
 // Get user statistics
 $conn = getDBConnection();
-$usersQuery = "SELECT user_ip, 
+$usersQuery = "SELECT cs.user_ip, 
                       COUNT(DISTINCT cs.session_id) as total_sessions,
                       COUNT(cm.id) as total_messages,
                       MAX(cs.updated_at) as last_activity,
                       MIN(cs.created_at) as first_activity
                FROM chat_sessions cs
                LEFT JOIN chat_messages cm ON cs.session_id = cm.session_id
-               GROUP BY user_ip
+               GROUP BY cs.user_ip
                ORDER BY total_messages DESC";
 
 $users = $conn->query($usersQuery)->fetch_all(MYSQLI_ASSOC);
