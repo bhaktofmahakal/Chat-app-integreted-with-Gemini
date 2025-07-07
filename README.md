@@ -6,13 +6,23 @@
 [![LaTeX](https://img.shields.io/badge/LaTeX-Editor-008080?style=for-the-badge&logo=latex&logoColor=white)](https://www.latex-project.org/)
 
 <!-- 🚀 High-Impact GitHub Banner -->
-<p align="center">
+<p align="center" style="margin: 40px 0;">
   <img 
     src="./images/main.png" 
     alt="AI Chat Assistant Banner" 
     width="100%" 
-    style="max-width: 1200px; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+    style="
+      max-width: 1100px; 
+      border-radius: 16px; 
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); 
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+    "
+    onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 16px 48px rgba(0, 0, 0, 0.35)'"
+    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 40px rgba(0, 0, 0, 0.25)'"
+  >
 </p>
+
 
 **AI Assistant Chat Application** is a cutting-edge, full-stack conversational AI platform that harnesses the power of Google's Gemini 1.5 Flash model to deliver intelligent, context-aware responses. Built with modern web technologies, it features an integrated LaTeX editor, comprehensive admin dashboard, and advanced chat management capabilities.
 
@@ -26,6 +36,37 @@
 🌓 **Dark/Light Mode** – Adaptive themes for optimal user experience  
 📱 **Responsive Design** – Seamless experience across all devices  
 🔄 **Real-time Streaming** – Live AI response streaming for better UX  
+
+---
+
+## 📸 Application Screenshots
+
+### 💬 AI Chat Interface
+<div align="center">
+  <img src="./images/light.png" alt="AI Chat Interface" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
+</div>
+
+---
+
+### 📝 LaTeX Editor
+<div align="center">
+  <img src="./images/latex.png" alt="LaTeX Editor" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
+</div>
+
+---
+
+### 📊 Admin Dashboard
+<div align="center">
+  <img src="./images/admin.png" alt="Admin Dashboard" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
+</div>
+
+---
+
+### 🌓 Dark Mode Interface
+<div align="center">
+  <img src="./images/dark.png" alt="Dark Mode" width="80%" style="border-radius: 12px; border: 1px solid #333;" />
+</div>
+
 
 ---
 
@@ -91,7 +132,7 @@
 ## 📁 Project Architecture
 
 <details>
-<summary>🏗️ Click to expand project structure</summary>
+<summary> Click to expand </summary>
 
 ```
 AI-Assistant-Chat-Application/
@@ -168,7 +209,7 @@ AI-Assistant-Chat-Application/
 ## 🚀 Quick Start
 
 <details>
-<summary>Click to expand </summary>
+<summary> Click to expand </summary>
 
 ### Prerequisites
 - PHP 8.0 or higher
@@ -226,37 +267,6 @@ Visit `http://localhost:8000` to access the application.
 
 ---
 
-## 📸 Application Screenshots
-
-### 💬 AI Chat Interface
-<div align="center">
-  <img src="./images/light.png" alt="AI Chat Interface" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
-</div>
-
----
-
-### 📝 LaTeX Editor
-<div align="center">
-  <img src="./images/latex.png" alt="LaTeX Editor" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
-</div>
-
----
-
-### 📊 Admin Dashboard
-<div align="center">
-  <img src="./images/admin.png" alt="Admin Dashboard" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
-</div>
-
----
-
-### 🌓 Dark Mode Interface
-<div align="center">
-  <img src="./images/dark.png" alt="Dark Mode" width="80%" style="border-radius: 12px; border: 1px solid #333;" />
-</div>
-
-
----
-
 ## 🔧 Configuration Options
 
 <details>
@@ -307,26 +317,6 @@ define('MAX_COMPILE_SIZE', '10MB');
 - **Image Optimization**: Automatic image compression and resizing
 - **Lazy Loading**: Progressive loading of chat history
 - **CDN Integration**: Static asset delivery optimization
-
-</details>
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### Development Guidelines
-- Follow PSR-12 coding standards for PHP
-- Use meaningful commit messages
-- Add unit tests for new features
-- Update documentation as needed
 
 ---
 
@@ -394,6 +384,28 @@ Content-Type: application/json
 - **RAM**: 8GB+
 - **Storage**: 150GB free space
 - **LaTeX**: TeXLive 2023+
+
+
+
+</details>
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+### Development Guidelines
+- Follow PSR-12 coding standards for PHP
+- Use meaningful commit messages
+- Add unit tests for new features
+- Update documentation as needed
 
 ---
 
