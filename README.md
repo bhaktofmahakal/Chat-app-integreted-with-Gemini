@@ -8,7 +8,7 @@
 <!-- 🚀 High-Impact GitHub Banner -->
 <p align="center">
   <img 
-    src="https://github.com/bhaktofmahakal/Chat-app-integreted-with-Gemini/images/main.png/1200x400/667eea/ffffff?text=AI+Assistant+Chat+Application" 
+    src="https://github.com/bhaktofmahakal/Chat-app-integreted-with-Gemini/blob/main/images/main.png/1200x400/667eea/ffffff?text=AI+Assistant+Chat+Application" 
     alt="AI Chat Assistant Banner" 
     width="100%" 
     style="max-width: 1200px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
