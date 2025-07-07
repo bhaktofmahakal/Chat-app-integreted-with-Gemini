@@ -167,6 +167,9 @@ AI-Assistant-Chat-Application/
 
 ## 🚀 Quick Start
 
+<details>
+<summary>Click to expand </summary>
+
 ### Prerequisites
 - PHP 8.0 or higher
 - MySQL 5.7 or higher
@@ -219,6 +222,8 @@ php -S localhost:8000
 
 Visit `http://localhost:8000` to access the application.
 
+</details>
+
 ---
 
 ## 📸 Application Screenshots
@@ -254,6 +259,8 @@ Visit `http://localhost:8000` to access the application.
 
 ## 🔧 Configuration Options
 
+<details>
+<summary>click here</summary>
 ### Gemini AI Settings
 ```php
 // config/gemini_config.php
@@ -300,6 +307,8 @@ define('MAX_COMPILE_SIZE', '10MB');
 - **Image Optimization**: Automatic image compression and resizing
 - **Lazy Loading**: Progressive loading of chat history
 - **CDN Integration**: Static asset delivery optimization
+
+</details>
 
 ---
 
