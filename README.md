@@ -20,6 +20,104 @@
   <img width="100%" height="4" src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" alt="Gradient Line">
 </div>
 
+
+<p align="center">
+  <img 
+    src="./images/main.png" 
+    alt="🚀 AI Chat Assistant - Powering the Future of Conversation"
+    width="100%" 
+    style="max-width: 1100px; border-radius: 18px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); display: block;"
+  >
+</p>
+
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="3">
+  
+  <img 
+    src="./images/main.png" 
+    alt="✨ AI Chat Assistant - Where Innovation Meets Conversation"
+    width="100%" 
+    style="max-width: 1100px; border-radius: 20px; margin: 20px 0; box-shadow: 0 25px 50px rgba(0,0,0,0.4);"
+  >
+  
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" height="3">
+</div>
+
+
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="100%" height="2">
+  
+  <table>
+    <tr>
+      <td>
+        <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="2" height="300">
+      </td>
+      <td>
+        <img 
+          src="./images/main.png" 
+          alt="🔮 AI Chat Assistant - Future is Here"
+          width="100%" 
+          style="max-width: 1100px; border-radius: 16px; margin: 10px;"
+        >
+      </td>
+      <td>
+        <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="2" height="300">
+      </td>
+    </tr>
+  </table>
+  
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="100%" height="2">
+</div>
+
+
+
+<div align="center">
+  <img 
+    src="./images/main.png" 
+    alt="🏆 AI Chat Assistant - Excellence in Artificial Intelligence"
+    width="100%" 
+    style="max-width: 1100px; border-radius: 16px; box-shadow: 0 12px 40px rgba(0,0,0,0.15); margin: 20px 0;"
+  >
+  
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Welcome+to+AI+Chat+Assistant;Next+Generation+Conversational+AI;Built+with+Modern+Technologies" alt="Typing Animation">
+</div>
+
+
+<p align="center">
+  <img 
+    src="./images/main.png" 
+    alt="AI Chat Assistant Banner"
+    width="100%" 
+    style="max-width: 1100px; border-radius: 16px; box-shadow: 0 12px 40px rgba(0,0,0,0.25); margin: 40px 0;"
+  >
+</p>
+
+
+
+
+<div align="center">
+  <img align="right" src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385b7ca7d2.gif" width="40" alt="Floating AI">
+  
+  <img 
+    src="./images/main.png" 
+    alt="🤖 AI Chat Assistant"
+    width="100%" 
+    style="max-width: 1100px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); margin: 20px 0;"
+  >
+  
+  <img align="left" src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385b7ca7d2.gif" width="40" alt="Floating AI">
+</div>
+
+
+
+
+
+
+
+
+
 **AI Assistant Chat Application** is a cutting-edge, full-stack conversational AI platform that harnesses the power of Google's Gemini 1.5 Flash model to deliver intelligent, context-aware responses. Built with modern web technologies, it features an integrated LaTeX editor, comprehensive admin dashboard, and advanced chat management capabilities.
 
 ---
