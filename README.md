@@ -8,15 +8,13 @@
 # Modern Static Style
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./images/main-dark.png">
     <img 
       src="./images/main.png" 
       alt="🤖 AI Chat Assistant - Next Generation Conversational AI"
       width="100%"
       style="max-width: 1100px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); display: block;"
     >
-  </picture>
+  
   
   <!-- Gradient separator -->
   <img width="100%" height="4" src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" alt="Gradient Line">
