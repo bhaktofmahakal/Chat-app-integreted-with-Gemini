@@ -8,7 +8,7 @@
 <!-- 🚀 High-Impact GitHub Banner -->
 <p align="center">
   <img 
-    src="https://github.com/bhaktofmahakal/Chat-app-integreted-with-Gemini/blob/main/images/main.png/1200x400?text=AI+Assistant+Chat+Application" 
+    src="./images/main.png/1200x400?text=AI+Assistant+Chat+Application" 
     alt="AI Chat Assistant Banner" 
     width="100%" 
     style="max-width: 1200px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
@@ -225,29 +225,30 @@ Visit `http://localhost:8000` to access the application.
 
 ### 💬 AI Chat Interface
 <div align="center">
-  <img src="https://via.placeholder.com/800x500/667eea/ffffff?text=AI+Chat+Interface" alt="AI Chat Interface" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
+  <img src="./images/light.png" alt="AI Chat Interface" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
 </div>
 
 ---
 
 ### 📝 LaTeX Editor
 <div align="center">
-  <img src="https://via.placeholder.com/800x500/52c41a/ffffff?text=LaTeX+Editor+with+Preview" alt="LaTeX Editor" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
+  <img src="./images/latex.png" alt="LaTeX Editor" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
 </div>
 
 ---
 
 ### 📊 Admin Dashboard
 <div align="center">
-  <img src="https://via.placeholder.com/800x500/722ed1/ffffff?text=Admin+Dashboard+Analytics" alt="Admin Dashboard" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
+  <img src="./images/admin.png" alt="Admin Dashboard" width="80%" style="border-radius: 12px; border: 1px solid #ddd;" />
 </div>
 
 ---
 
 ### 🌓 Dark Mode Interface
 <div align="center">
-  <img src="https://via.placeholder.com/800x500/141414/ffffff?text=Dark+Mode+Chat+Interface" alt="Dark Mode" width="80%" style="border-radius: 12px; border: 1px solid #333;" />
+  <img src="./images/dark.png" alt="Dark Mode" width="80%" style="border-radius: 12px; border: 1px solid #333;" />
 </div>
+
 
 ---
 
