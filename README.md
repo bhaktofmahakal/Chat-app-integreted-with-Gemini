@@ -271,6 +271,7 @@ Visit `http://localhost:8000` to access the application.
 
 <details>
 <summary>click here</summary>
+  
 ### Gemini AI Settings
 ```php
 // config/gemini_config.php
